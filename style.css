@@ -47,9 +47,8 @@ section {
 }
 
 .home > div {
-  max-height: 30rem;
   cursor: pointer;
-  max-height: 80vh;
+  height: 80vh;
 }
 
 svg {
@@ -61,7 +60,7 @@ svg {
 .homeContent {
   padding: 2.5rem;
   flex-grow: 1;
-  font-size: 1.5rem;
+  font-size: var(--small-font);
   max-width: 60%;
   color: white;
 }
@@ -148,14 +147,30 @@ footer li {
 }
 
 @media only screen and (max-width: 900px) {
+  :root {
+    --small-font: 0.7rem;
+  }
   header {
+    height: 4rem;
     font-size: var(--medium-font);
+  }
+  body {
+    gap: 1rem;
   }
   .home {
     flex-direction: column;
   }
+
+  .home > div {
+    height: 50vh;
+  }
+
+  svg {
+    height: 20rem;
+    width: 20rem;
+  }
   .homeContent {
-    max-width: 80%;
+    max-width: 100%;
   }
   .skillset {
     grid-template-columns: repeat(2, 1fr);
@@ -170,7 +185,12 @@ footer li {
   .home {
     flex-direction: column;
   }
+
+  .home > div {
+    height: 60vh;
+  }
   .homeContent {
+    padding: 0;
     max-width: 80%;
   }
   .skillset {
