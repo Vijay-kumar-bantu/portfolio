@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --background-color: #454655;
+  --primary-color: #f9f871;
+  --secondary-color: #ffbd6c;
+  --accent-color: #3f3d56;
+  --font-color: #ffffff;
+  --big-font: 2.3rem;
+  --medium-font: 1.5rem;
+  --small-font: 1rem;
+}
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  font-size: var(--small-font);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  height: 6.5rem;
+  font-size: var(--big-font);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  /* width: 100%; */
+  padding-left: 1.5rem;
+}
+
+/* section of home starts here*/
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home > div {
+  max-height: 30rem;
+  cursor: pointer;
+  max-height: 80vh;
+}
+
+svg {
+  height: 30rem;
+  width: 30rem;
+  overflow: hidden;
+}
+
+.homeContent {
+  padding: 2.5rem;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  max-width: 60%;
+  color: white;
+}
+
+.homeContent > p,
+.aboutContent > p {
+  padding: 1rem 1rem 1rem 0;
+  font-size: var(--small-font);
+}
+
+/* section of home ends here*/
+
+/* section of aboutme starts here*/
+
+.underline::after {
+  display: block;
+  content: "";
+  height: 0.5rem;
+  width: 60%;
+  background-color: var(--primary-color);
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* section of aboutme ends here*/
+
+/* my skills section */
+
+.skillset {
+  padding: 10px;
+  padding-top: 20px;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.skillset li {
+  border: 3px solid white;
+  border-radius: 10px;
+  list-style: none;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer {
+  padding: 2rem;
+  height: 20vh;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  font-size: var(--small-font);
+}
+
+footer li {
+  list-style: none;
+  font-size: var(--medium-font);
+}
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.contact a {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.mailme {
+  background-color: var(--primary-color);
+  padding: 15px;
+  font-size: var(--small-font);
+  font-family: inherit;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.mailme a {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    font-size: var(--medium-font);
+  }
+  .home {
+    flex-direction: column;
+  }
+  .homeContent {
+    max-width: 80%;
+  }
+  .skillset {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    font-size: var(--small-font);
+    width: 100%;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .homeContent {
+    max-width: 80%;
+  }
+  .skillset {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
