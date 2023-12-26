@@ -132,7 +132,7 @@ footer li {
   color: inherit;
 }
 
-.mailme {
+.resume {
   background-color: var(--primary-color);
   padding: 15px;
   font-size: var(--small-font);
@@ -141,7 +141,7 @@ footer li {
   width: fit-content;
 }
 
-.mailme a {
+.resume a {
   color: var(--background-color);
   text-decoration: none;
 }
